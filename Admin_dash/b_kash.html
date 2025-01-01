@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bKash Payment Gateway</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .payment-container {
+            background: #fff;
+            width: 400px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .payment-container h1 {
+            color: #e33671;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: #e33671;
+            color: #fff;
+            font-size: 16px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #c0295d;
+        }
+
+        .bkash-logo {
+            margin-bottom: 20px;
+        }
+
+        .bkash-logo img {
+            width: 100px;
+        }
+
+        .footer {
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <div class="bkash-logo">
+            <img src="bkash.png" alt="bKash Logo">
+        </div>
+        <h1>bKash Payment Gateway</h1>
+        <form action="/submit-payment" method="POST">
+            <div class="input-group">
+                <label for="phone">bKash Account Number</label>
+                <input type="text" id="phone" name="phone" placeholder="e.g., 017XXXXXXXX" required>
+            </div>
+            <div class="input-group">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" placeholder="e.g., 1000" required>
+            </div>
+            <button type="submit" class="submit-btn">Pay Now</button>
+        </form>
+        <div class="footer">
+            <p>Powered by bKash | Secure Payment</p>
+        </div>
+    </div>
+</body>
+</html>
